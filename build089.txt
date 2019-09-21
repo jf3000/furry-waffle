@@ -16,7 +16,7 @@ Updated Updater - Yes
 Date: September 2019
 
 Distribution Toolkit - WIP
-Date: September 2019
+Date: August/September 2019
 
 Q: How is the toolkit process going (September 15th)?
 A: Breakdown:
