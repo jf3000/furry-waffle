@@ -1,6 +1,6 @@
 Toolkit Changelog
 
-Toolkit Version: 0.0.0.1
+Toolkit Version: 0.0.0.4
 Build Version: 0.0.90
 
 Updated Core: Yes - WIP
