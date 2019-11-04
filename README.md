@@ -1,39 +1,13 @@
-Toolkit Changelog
+# GeGeek 
 
-Toolkit Version: 0.0.0.1
-Build Version: 0.0.90
+GeGeek is a small application which automatically updates setup packages. As opposed to other tools, GeGeek is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.
 
-Updated Core: Yes - WIP
-Date: October 2019
+I created this application, because I couldn't find anything like it when I needed such a functionality. Since I don't want my efforts go to waste, I decided to release it to the public. GeGeek is open source, so you can also extend its functionality to fit your needs (just note that you may not use the icons that ship with it freely as well). I'd also appreciate source code contributions. GeGeek is written in C#, for the .NET Framework 4.5 and uses SQLite as database engine.
 
-Updated Registration: Yes
-Date: October 2019
+## How does it work?
 
-Updated License: Yes - WIP
-Date: October 2019
+Basically, it monitors the content of web pages for changes and downloads files to a specified location. There is a tutorial explaining it all. Currently, you can either rely on a service based on FileHippo, or you can define your own rules, even using regular expressions (for advanced users). A similar application, for monitoring web pages, is Webmon and has sometimes served as guide. 
 
-Updated Updater - Yes
-Date: October 2019
+## Development
 
-Distribution Toolkit - WIP
-Date: October 2019
-
-Q: How is the toolkit process going (September 15th)?
-A: Breakdown:
-Installer        - 100%
-Updater          - 35%
-Toolkit          - 91%
-Coding           - 75%
-Emailing Serials - 100%
-
-The submission of the serials is now complete. Everyone has there own unique serial.
-
-The updater is still being worked on, the license hasn't been added to the updater yet.
-
-The Toolkit is incomplete because when you check for updates an error happens -  
-see https://github.com/GeGeekTech/furry-waffle/issues/3
-
-Coding is reflecting the Toolkit+Updater+Distribution = Coding
-
-Distribution: Date: October 2019
-Distribution of Toolkit for release is on target.
+[![Build status](https://ci.appveyor.com/api/projects/status/64v9x5oobte4rkaj?svg=true)](https://ci.appveyor.com/project/floele/GeGeek)

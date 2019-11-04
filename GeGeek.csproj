@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{288E5727-81A4-4079-A089-3B60DA408CBC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeGeek</RootNamespace>
+    <AssemblyName>GeGeek</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>GeGeek.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Core.1.0.109.2\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.PowerShell.5.ReferenceAssemblies.1.1.0\lib\net4\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tamir.SharpSsh, Version=1.1.1.13, Culture=neutral, PublicKeyToken=4ed5f4288b4076af, processorArchitecture=MSIL">
+      <HintPath>packages\Tamir.SharpSsh.dll.1.1.1.14\lib\Tamir.SharpSsh.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationList.cs" />
+    <Compile Include="CDBurnerXP\AdvancedListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\AdvancedListBox.designer.cs">
+      <DependentUpon>AdvancedListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDBurnerXP\AutoSizeLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\ControlRedrawLock.cs" />
+    <Compile Include="CDBurnerXP\Conversion.cs" />
+    <Compile Include="CDBurnerXP\Debug.cs" />
+    <Compile Include="CDBurnerXP\FormatFileSize.cs" />
+    <Compile Include="CDBurnerXP\GenericEventArgs.cs" />
+    <Compile Include="CDBurnerXP\IconReader.cs" />
+    <Compile Include="CDBurnerXP\IMirrorControl.cs" />
+    <Compile Include="CDBurnerXP\Kernel32.cs" />
+    <Compile Include="CDBurnerXP\ListBoxPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\ListBoxPanel.designer.cs">
+      <DependentUpon>ListBoxPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDBurnerXP\ListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\MarqueeProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\ObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\OwnerDrawnMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\PanelCollection.cs" />
+    <Compile Include="CDBurnerXP\PathEx.cs" />
+    <Compile Include="CDBurnerXP\PersistentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDBurnerXP\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDBurnerXP\SafeClipboard.cs" />
+    <Compile Include="CDBurnerXP\Separator.cs" />
+    <Compile Include="CDBurnerXP\Settings.cs" />
+    <Compile Include="CDBurnerXP\Shell32.cs" />
+    <Compile Include="CDBurnerXP\User32.cs" />
+    <Compile Include="CDBurnerXP\Utility.cs" />
+    <Compile Include="CDBurnerXP\VistaMenu.cs" />
+    <Compile Include="CDBurnerXP\WebLink.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CloseProcessInstruction.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CrcStream.cs" />
+    <Compile Include="Downloader\CalculatedSegment.cs" />
+    <Compile Include="Downloader\Common\BoolFormatter.cs" />
+    <Compile Include="Downloader\Common\PathHelper.cs" />
+    <Compile Include="Downloader\Common\TimeSpanFormatter.cs" />
+    <Compile Include="Downloader\Concurrency\ObjectLocker.cs" />
+    <Compile Include="Downloader\Concurrency\ReaderWriterObjectLocker.cs" />
+    <Compile Include="Downloader\Downloader.cs" />
+    <Compile Include="Downloader\DownloaderState.cs" />
+    <Compile Include="Downloader\EventArgs.cs" />
+    <Compile Include="Downloader\Extensions\IExtension.cs" />
+    <Compile Include="Downloader\Extensions\IExtensionParameters.cs" />
+    <Compile Include="Downloader\Extensions\IInitializable.cs" />
+    <Compile Include="Downloader\Extensions\IUIExtension.cs" />
+    <Compile Include="Downloader\IMirrorSelector.cs" />
+    <Compile Include="Downloader\IProtocolProvider.cs" />
+    <Compile Include="Downloader\ISegmentCalculator.cs" />
+    <Compile Include="Downloader\MinSizeSegmentCalculator.cs" />
+    <Compile Include="Downloader\ProtocolProviderFactory.cs" />
+    <Compile Include="Downloader\Protocols\BaseProtocolProvider.cs" />
+    <Compile Include="Downloader\Protocols\FtpProtocolProvider.cs" />
+    <Compile Include="Downloader\Protocols\HttpFtpProtocolExtension.cs" />
+    <Compile Include="Downloader\Protocols\HttpFtpProtocolParametersSettingsProxy.cs" />
+    <Compile Include="Downloader\Protocols\HttpProtocolProvider.cs" />
+    <Compile Include="Downloader\Protocols\IHttpFtpProtocolParameters.cs" />
+    <Compile Include="Downloader\Protocols\GeGeekProtocolProvider.cs" />
+    <Compile Include="Downloader\RemoteFileInfo.cs" />
+    <Compile Include="Downloader\ResourceLocation.cs" />
+    <Compile Include="Downloader\Segment.cs" />
+    <Compile Include="Downloader\SegmentState.cs" />
+    <Compile Include="Downloader\SequentialMirrorSelector.cs" />
+    <Compile Include="Downloader\Settings.cs" />
+    <Compile Include="Forms\AddCustomColumnDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCustomColumnDialog.Designer.cs">
+      <DependentUpon>AddCustomColumnDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CloseProcessInstructionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CloseProcessInstructionDialog.Designer.cs">
+      <DependentUpon>CloseProcessInstructionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HashType.cs" />
+    <Compile Include="Hotkey.cs" />
+    <Compile Include="HttpxRequest.cs" />
+    <Compile Include="CopyFileInstruction.cs" />
+    <Compile Include="CustomSetupInstruction.cs" />
+    <Compile Include="Forms\ChooseAppsToInstallDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChooseAppsToInstallDialog.Designer.cs">
+      <DependentUpon>ChooseAppsToInstallDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CommandControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CommandControl.Designer.cs">
+      <DependentUpon>CommandControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CopyFileInstructionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CopyFileInstructionDialog.Designer.cs">
+      <DependentUpon>CopyFileInstructionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomSetupInstructionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomSetupInstructionDialog.Designer.cs">
+      <DependentUpon>CustomSetupInstructionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InstallingApplicationsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstallingApplicationsDialog.Designer.cs">
+      <DependentUpon>InstallingApplicationsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewSnippetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewSnippetDialog.Designer.cs">
+      <DependentUpon>NewSnippetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaintableTextBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectApplicationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectApplicationDialog.Designer.cs">
+      <DependentUpon>SelectApplicationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetupInstructionListBoxPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\InstructionBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstructionBaseDialog.Designer.cs">
+      <DependentUpon>InstructionBaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StartProcessInstructionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartProcessInstructionDialog.Designer.cs">
+      <DependentUpon>StartProcessInstructionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HintTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PowerShellScript.cs" />
+    <Compile Include="Scp.cs" />
+    <Compile Include="ScriptType.cs" />
+    <Compile Include="SettingsExporter.cs" />
+    <Compile Include="SetupInstruction.cs" />
+    <Compile Include="ApplicationJob.cs" />
+    <Compile Include="ApplicationJobError.cs" />
+    <Compile Include="ApplicationJobsListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommandErrorException.cs" />
+    <Compile Include="CommandLineParser.cs" />
+    <Compile Include="ContextMenuCustomiser.cs" />
+    <Compile Include="ContextMenuItem.cs" />
+    <Compile Include="DbManager.cs" />
+    <Compile Include="ExternalServices.cs" />
+    <Compile Include="Forms\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ApplicationDatabaseBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ApplicationDatabaseBaseDialog.Designer.cs">
+      <DependentUpon>ApplicationDatabaseBaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ApplicationJobDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ApplicationJobDialog.Designer.cs">
+      <DependentUpon>ApplicationJobDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BrowserPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BrowserPreviewDialog.Designer.cs">
+      <DependentUpon>BrowserPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteApplicationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteApplicationDialog.Designer.cs">
+      <DependentUpon>DeleteApplicationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditVariablesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditVariablesDialog.Designer.cs">
+      <DependentUpon>EditVariablesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorsDialog.Designer.cs">
+      <DependentUpon>ErrorsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportFromDatabaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportFromDatabaseDialog.Designer.cs">
+      <DependentUpon>ImportFromDatabaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogDialog.Designer.cs">
+      <DependentUpon>LogDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MultilineEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MultilineEditorDialog.Designer.cs">
+      <DependentUpon>MultilineEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewVariableDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewVariableDialog.Designer.cs">
+      <DependentUpon>NewVariableDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PostDataEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PostDataEditor.Designer.cs">
+      <DependentUpon>PostDataEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RenameFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RenameFileDialog.Designer.cs">
+      <DependentUpon>RenameFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetPlaceholderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetPlaceholderDialog.Designer.cs">
+      <DependentUpon>SetPlaceholderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SimilarApplicationsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SimilarApplicationsDialog.Designer.cs">
+      <DependentUpon>SimilarApplicationsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\VariableTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ftplib.cs" />
+    <Compile Include="IGeGeekRpc.cs" />
+    <Compile Include="GeGeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonBinaryFileException.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CDBurnerXP\AdvancedListBox.resx">
+      <DependentUpon>AdvancedListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDBurnerXP\ListBoxPanel.resx">
+      <DependentUpon>ListBoxPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDBurnerXP\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ApplicationDatabaseBaseDialog.resx">
+      <DependentUpon>ApplicationDatabaseBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ApplicationJobDialog.resx">
+      <DependentUpon>ApplicationJobDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BrowserPreviewDialog.resx">
+      <DependentUpon>BrowserPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CopyFileInstructionDialog.resx">
+      <DependentUpon>CopyFileInstructionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomSetupInstructionDialog.resx">
+      <DependentUpon>CustomSetupInstructionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstallingApplicationsDialog.resx">
+      <DependentUpon>InstallingApplicationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetupInstructionListBoxPanel.resx">
+      <DependentUpon>SetupInstructionListBoxPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteApplicationDialog.resx">
+      <DependentUpon>DeleteApplicationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditVariablesDialog.resx">
+      <DependentUpon>EditVariablesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorsDialog.resx">
+      <DependentUpon>ErrorsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportFromDatabaseDialog.resx">
+      <DependentUpon>ImportFromDatabaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstructionBaseDialog.resx">
+      <DependentUpon>InstructionBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogDialog.resx">
+      <DependentUpon>LogDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MultilineEditorDialog.resx">
+      <DependentUpon>MultilineEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewVariableDialog.resx">
+      <DependentUpon>NewVariableDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PostDataEditor.resx">
+      <DependentUpon>PostDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RenameFileDialog.resx">
+      <DependentUpon>RenameFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetPlaceholderDialog.resx">
+      <DependentUpon>SetPlaceholderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StartProcessInstructionDialog.resx">
+      <DependentUpon>StartProcessInstructionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SimilarApplicationsDialog.resx">
+      <DependentUpon>SimilarApplicationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include=".editorconfig" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="Snippet.cs" />
+    <Compile Include="SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StartProcessInstruction.cs" />
+    <Compile Include="TargetPathInvalidException.cs" />
+    <Compile Include="Updater.cs" />
+    <Compile Include="UrlVariable.cs" />
+    <Compile Include="UserCSScript.cs" />
+    <Compile Include="VariableIsEmptyException.cs" />
+    <Compile Include="WebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XmlRpc\IHttpRequest.cs" />
+    <Compile Include="XmlRpc\IHttpRequestHandler.cs" />
+    <Compile Include="XmlRpc\IHttpResponse.cs" />
+    <Compile Include="XmlRpc\IXmlRpcProxy.cs" />
+    <Compile Include="XmlRpc\RequestResponseLogger.cs" />
+    <Compile Include="XmlRpc\SystemMethodsBase.cs" />
+    <Compile Include="XmlRpc\Tracer.cs" />
+    <Compile Include="XmlRpc\util.cs" />
+    <Compile Include="XmlRpc\XmlRpcAsyncResult.cs" />
+    <Compile Include="XmlRpc\XmlRpcBeginAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcBoolean.cs" />
+    <Compile Include="XmlRpc\XmlRpcClientFormatterSink.cs" />
+    <Compile Include="XmlRpc\XmlRpcClientFormatterSinkProvider.cs" />
+    <Compile Include="XmlRpc\XmlRpcClientProtocol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XmlRpc\XmlRpcDateTime.cs" />
+    <Compile Include="XmlRpc\XmlRpcDocWriter.cs" />
+    <Compile Include="XmlRpc\XmlRpcDouble.cs" />
+    <Compile Include="XmlRpc\XmlRpcEndAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcException.cs" />
+    <Compile Include="XmlRpc\XmlRpcFaultException.cs" />
+    <Compile Include="XmlRpc\XmlRpcHttpRequest.cs" />
+    <Compile Include="XmlRpc\XmlRpcHttpResponse.cs" />
+    <Compile Include="XmlRpc\XmlRpcHttpServerProtocol.cs" />
+    <Compile Include="XmlRpc\XmlRpcInt.cs" />
+    <Compile Include="XmlRpc\XmlRpcListenerRequest.cs" />
+    <Compile Include="XmlRpc\XmlRpcListenerResponse.cs" />
+    <Compile Include="XmlRpc\XmlRpcListenerService.cs" />
+    <Compile Include="XmlRpc\XmlRpcLogger.cs" />
+    <Compile Include="XmlRpc\XmlRpcMemberAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcMethodAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcMethodInfo.cs" />
+    <Compile Include="XmlRpc\XmlRpcMissingMappingAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcNonStandard.cs" />
+    <Compile Include="XmlRpc\XmlRpcParameterAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcParameterInfo.cs" />
+    <Compile Include="XmlRpc\XmlRpcProxyCodeGen.cs" />
+    <Compile Include="XmlRpc\XmlRpcProxyGen.cs" />
+    <Compile Include="XmlRpc\XmlRpcRequest.cs" />
+    <Compile Include="XmlRpc\XmlRpcRequestEventArgs.cs" />
+    <Compile Include="XmlRpc\XmlRpcResponse.cs" />
+    <Compile Include="XmlRpc\XmlRpcResponseEventArgs.cs" />
+    <Compile Include="XmlRpc\XmlRpcReturnValueAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcSerializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcServerFormatterSink.cs" />
+    <Compile Include="XmlRpc\XmlRpcServerFormatterSinkProvider.cs" />
+    <Compile Include="XmlRpc\XmlRpcServerProtocol.cs" />
+    <Compile Include="XmlRpc\XmlRpcService.cs" />
+    <Compile Include="XmlRpc\XmlRpcServiceAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcServiceInfo.cs" />
+    <Compile Include="XmlRpc\XmlRpcStruct.cs" />
+    <Compile Include="XmlRpc\XmlRpcUrlAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\CloseSearch.png" />
+    <None Include="Icon\CloseSearchDown.png" />
+    <None Include="Icon\CloseSearchHover.png" />
+    <None Include="Icon\Setup.png" />
+    <None Include="Icon\Setup32.png" />
+    <Content Include="GeGeek.ico">
+      <Generator>up</Generator>
+    </Content>
+    <None Include="Resources\DeleteHS.png" />
+    <None Include="Resources\GoToNextMessage.png" />
+    <None Include="Resources\GoToPreviousMessage.png" />
+    <None Include="Resources\LineColorHS.png" />
+    <EmbeddedResource Include="Forms\AddCustomColumnDialog.resx">
+      <DependentUpon>AddCustomColumnDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChooseAppsToInstallDialog.resx">
+      <DependentUpon>ChooseAppsToInstallDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CloseProcessInstructionDialog.resx">
+      <DependentUpon>CloseProcessInstructionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommandControl.resx">
+      <DependentUpon>CommandControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewSnippetDialog.resx">
+      <DependentUpon>NewSnippetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectApplicationDialog.resx">
+      <DependentUpon>SelectApplicationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\Arrow Down.png" />
+    <None Include="Resources\Arrow Up.png" />
+    <None Include="Resources\NewDownloaded.png" />
+    <None Include="Resources\New.png" />
+    <None Include="Resources\Symbol Information.png" />
+    <None Include="Resources\Document Restricted.png" />
+    <None Include="Resources\Symbol Delete.png" />
+    <None Include="Resources\Symbol Check.png" />
+    <None Include="Resources\Import.png" />
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
