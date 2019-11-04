@@ -8,4 +8,4 @@ Even though we’ve gone back and updated the toolkit, downloading the installer
 
 ## Development
 
-[![Build status](https://gegeek.com)](https://gegeek.com)
+https://gegeek.com
