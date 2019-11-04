@@ -1,13 +1,11 @@
 # GeGeek 
 
-GeGeek is a small application which automatically updates setup packages. As opposed to other tools, GeGeek is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.
+The All in 1 Tool for the Traveling Techs, Power Geeks and the Serious Home User
 
-I created this application, because I couldn't find anything like it when I needed such a functionality. Since I don't want my efforts go to waste, I decided to release it to the public. GeGeek is open source, so you can also extend its functionality to fit your needs (just note that you may not use the icons that ship with it freely as well). I'd also appreciate source code contributions. GeGeek is written in C#, for the .NET Framework 4.5 and uses SQLite as database engine.
+Welcome to the Toolkit. Our toolkit has been put together to support computer technicians of all sorts whom like to have a collection of readily available software to tackle any moment when it comes to solving computer issues e.g. Backing up customers software, removing ransomware to installing the latest drivers. The toolkit comprises of over 600+ applications not including all the programs from SysInternals and NirSoft as well (300+), all accessible from one Menu Launcher Utility. There’s even a feature to update all the programs automatically to ensure every program is @ the latest version, all contained on a Flash Drive for travel. There’s over 500 individual Windows 10 Registry configuration settings you can change right from within the program. You can elevate the program to Admin on the fly when the situation calls for it. Over 200 web links and helpful documents for various Tech Related repairs. I do all the research so you don’t have to, making sure all the latest and greatest tools available are included.
 
-## How does it work?
-
-Basically, it monitors the content of web pages for changes and downloads files to a specified location. There is a tutorial explaining it all. Currently, you can either rely on a service based on FileHippo, or you can define your own rules, even using regular expressions (for advanced users). A similar application, for monitoring web pages, is Webmon and has sometimes served as guide. 
+Even though we’ve gone back and updated the toolkit, downloading the installer is free, however because the installer requires registration, you’re hereby required to place a donation to obtain the serial number. Thousands of hours have gone into this toolkit over the years and we would appreciate your help with your donation to keep the support up for the server.
 
 ## Development
 
-[![Build status](https://ci.appveyor.com/api/projects/status/64v9x5oobte4rkaj?svg=true)](https://ci.appveyor.com/project/floele/GeGeek)
+[![Build status](https://gegeek.com)](https://gegeek.com)
