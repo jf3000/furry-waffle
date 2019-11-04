@@ -1,8 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 14.00
-# Visual Studio 2020
-VisualStudioVersion = 14.5.30524.4
-MinimumVisualStudioVersion = 14.2.31025.4
+﻿StudioSX, Format V3.25.024
 Project("{FGVGEC0-505F-78D3-BF4B-00C04F79EFBC}") = "GeGeek", "GeGeek.csproj", "{288E5727-81A4-4079-A089-3B60DA408CBC}"
 EndProject
 Global
